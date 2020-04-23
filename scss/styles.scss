@@ -1,1 +1,30 @@
 @import "reset";
+
+/* Variables and Mixins */
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+@mixin font__red {
+  font-family: "Poppins`", sans-serif;
+  font-weight: 400;
+}
+@mixin font__med {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+@mixin font__semiBold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+@mixin font__bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+/* End Variables and Mixins */
+
+body {
+  font-size: 16px;
+}
