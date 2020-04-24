@@ -31,7 +31,14 @@ body {
 
 .full-wrap {
   background: url("../images/bg-intro-desktop.png"), $red;
+  display: flex;
   height: 100vh;
   overflow: hidden;
   width: 100%;
+}
+
+.hero,
+.cards {
+  display: flex;
+  width: 50%;
 }

@@ -143,9 +143,16 @@ body {
 
 .full-wrap {
   background: url("../images/bg-intro-desktop.png"), #ff7a7a;
+  display: flex;
   height: 100vh;
   overflow: hidden;
   width: 100%;
+}
+
+.hero,
+.cards {
+  display: flex;
+  width: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
