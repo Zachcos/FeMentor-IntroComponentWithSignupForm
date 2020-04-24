@@ -181,12 +181,12 @@ body {
 .cards__featured {
   font-family: "Poppins`", sans-serif;
   font-weight: 400;
-  color: white;
-  width: 100%;
-  padding: 22px 0;
-  text-align: center;
   background: #6055a5;
   border-radius: 10px;
+  color: white;
+  padding: 22px 0;
+  text-align: center;
+  width: 100%;
 }
 .cards__featured--bold {
   font-family: "Poppins", sans-serif;
