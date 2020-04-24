@@ -6,6 +6,7 @@ $green: hsl(154, 59%, 51%);
 $blue: hsl(248, 32%, 49%);
 $darkBlue: hsl(249, 10%, 26%);
 $grayishBlue: hsl(246, 25%, 77%);
+$white: hsl(0, 0, 100%);
 
 @mixin font__reg {
   font-family: "Poppins`", sans-serif;
@@ -44,17 +45,35 @@ body {
 }
 
 .hero {
-  color: white;
+  color: $white;
   flex-direction: column;
-  padding: 20% 8% 0 10%;
+  padding: 20% 4% 0 10%;
   &__title {
     @include font__bold;
     font-size: 3rem;
     line-height: 3.6rem;
   }
   &__copy {
-    @include font__reg;
+    @include font__med;
     line-height: 1.6rem;
     margin-top: 2rem;
+    opacity: 0.8;
+  }
+}
+
+.cards {
+  flex-direction: column;
+  padding: 10% 12% 0 0;
+  &__featured {
+    @include font__reg;
+    color: $white;
+    width: 100%;
+    padding: 22px 0;
+    text-align: center;
+    background: $blue;
+    border-radius: 10px;
+    &--bold {
+      @include font__semiBold;
+    }
   }
 }

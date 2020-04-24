@@ -158,7 +158,7 @@ body {
 .hero {
   color: white;
   flex-direction: column;
-  padding: 20% 8% 0 10%;
+  padding: 20% 4% 0 10%;
 }
 .hero__title {
   font-family: "Poppins", sans-serif;
@@ -167,10 +167,30 @@ body {
   line-height: 3.6rem;
 }
 .hero__copy {
-  font-family: "Poppins`", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   line-height: 1.6rem;
   margin-top: 2rem;
+  opacity: 0.8;
+}
+
+.cards {
+  flex-direction: column;
+  padding: 10% 12% 0 0;
+}
+.cards__featured {
+  font-family: "Poppins`", sans-serif;
+  font-weight: 400;
+  color: white;
+  width: 100%;
+  padding: 22px 0;
+  text-align: center;
+  background: #6055a5;
+  border-radius: 10px;
+}
+.cards__featured--bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=styles.css.map */
