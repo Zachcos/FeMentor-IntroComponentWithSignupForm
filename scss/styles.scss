@@ -28,3 +28,10 @@ $grayishBlue: hsl(246, 25%, 77%);
 body {
   font-size: 16px;
 }
+
+.full-wrap {
+  background: url("../images/bg-intro-desktop.png"), $red;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}

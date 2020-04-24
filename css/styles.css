@@ -141,4 +141,11 @@ body {
   font-size: 16px;
 }
 
+.full-wrap {
+  background: url("../images/bg-intro-desktop.png"), #ff7a7a;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
 /*# sourceMappingURL=styles.css.map */
