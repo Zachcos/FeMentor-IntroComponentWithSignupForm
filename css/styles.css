@@ -181,6 +181,8 @@ body {
 .cards__featured {
   font-family: "Poppins`", sans-serif;
   font-weight: 400;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
   background: #6055a5;
   border-radius: 10px;
   color: white;
@@ -193,6 +195,8 @@ body {
   font-weight: 600;
 }
 .cards__form {
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
   background-color: white;
   border-radius: 10px;
   margin-top: 25px;
@@ -231,6 +235,9 @@ body {
   text-transform: uppercase;
   background: #38cc8c;
   border-radius: 6px;
+  border-color: transparent;
+  -webkit-box-shadow: 0px 4px 0px 0px #2fb67c;
+  box-shadow: 0px 4px 0px 0px #2fb67c;
   color: white;
   margin: 0 auto;
   padding: 15px 0;
