@@ -42,3 +42,19 @@ body {
   display: flex;
   width: 50%;
 }
+
+.hero {
+  color: white;
+  flex-direction: column;
+  padding: 20% 8% 0 10%;
+  &__title {
+    @include font__bold;
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+  &__copy {
+    @include font__reg;
+    line-height: 1.6rem;
+    margin-top: 2rem;
+  }
+}
