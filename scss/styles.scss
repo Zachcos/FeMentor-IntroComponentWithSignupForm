@@ -76,4 +76,18 @@ body {
       @include font__semiBold;
     }
   }
+  &__form {
+    width: 100%;
+    border-radius: 10px;
+    background-color: $white;
+    margin-top: 25px;
+    form {
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+  }
 }

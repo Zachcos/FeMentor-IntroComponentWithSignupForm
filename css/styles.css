@@ -192,5 +192,19 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
+.cards__form {
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 25px;
+}
+.cards__form form {
+  display: flex;
+  flex-direction: column;
+}
+.cards__form form input {
+  width: 85%;
+  margin: 0 auto;
+}
 
 /*# sourceMappingURL=styles.css.map */
