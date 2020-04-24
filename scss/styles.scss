@@ -130,6 +130,7 @@ body {
       &--link {
         @include font__bold;
         color: $red;
+        text-decoration: none;
       }
     }
   }
