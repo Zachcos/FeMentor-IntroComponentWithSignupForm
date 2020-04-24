@@ -232,18 +232,24 @@ body {
 .cards__form form button {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
   background: #38cc8c;
-  border-radius: 6px;
   border-color: transparent;
+  border-radius: 6px;
   -webkit-box-shadow: 0px 4px 0px 0px #2fb67c;
   box-shadow: 0px 4px 0px 0px #2fb67c;
   color: white;
-  margin: 0 auto;
-  padding: 15px 0;
-  width: 85%;
   font-size: 0.9rem;
   letter-spacing: 1px;
+  margin: 0 auto;
+  outline: none;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 85%;
+}
+.cards__form form button:active, .cards__form form button:focus {
+  background: #aeead0;
+  -webkit-box-shadow: 0px 4px 0px 0px #85e0b9;
+  box-shadow: 0px 4px 0px 0px #85e0b9;
 }
 .cards__form__terms {
   font-family: "Poppins", sans-serif;
