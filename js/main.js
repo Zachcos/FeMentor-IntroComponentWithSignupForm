@@ -1,58 +1,52 @@
-const form = document.getElementById("form");
-const firstName = document.getElementById("firstName");
-const lastName = document.getElementById("lastName");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+const form = document.getElementById('form');
 
-form.addEventListener("submit", function (e) {
+function handleSubmit(e) {
   e.preventDefault();
-  onClick();
-});
+  const firstname = document.getElementById('firstname').value;
+  const lastname = document.getElementById('lastname').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-function onClick() {
-  const emailVal = email.value;
-  const firstVal = firstName.value;
-  const lastVal = lastName.value;
-  const passVal = password.value;
-
-  console.log(passVal)
-
-  if (validateNames(firstVal)) {
-    firstName.classList.remove("error")
+  if (firstname === '') {
+    addErrorTo('firstname');
   } else {
-    firstName.classList.add("error")
+    removeErrorFrom('firstname');
   }
 
-  if (validateNames(lastVal)) {
-    lastName.classList.remove("error")
+  if (lastname === '') {
+    addErrorTo('lastname');
   } else {
-    lastName.classList.add("error")
+    removeErrorFrom('lastname');
   }
 
-  if (validateEmail(emailVal)) {
-    email.classList.remove("error")
+  if (email === '') {
+    addErrorTo('email');
+  } else if (!isValid(email)) {
+    addErrorTo('email');
   } else {
-    email.classList.add("error")
+    removeErrorFrom('email');
   }
 
-  if (validatePass(passVal)) {
-    password.classList.remove("error") 
+  if (password === '') {
+    addErrorTo('password');
   } else {
-    password.classList.add("error")
+    removeErrorFrom('password');
   }
 }
 
-function validateNames(name) {
-  const nameRegEx = /^[a-zA-Z]*\w{1,}$/;
-  return nameRegEx.test(String(name).toLowerCase());
+function addErrorTo(field) {
+  const formControl = form[field].parentNode;
+  formControl.classList.add('error')
 }
 
-function validateEmail(email) {
-  const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return emailRegEx.test(String(email).toLowerCase());
+function removeErrorFrom(field) {
+  const formControl = form[field].parentNode;
+  formControl.classList.remove('error')
 }
 
-function validatePass(pass) {
-  const passRegEx = /^[A-Za-z]\w{7,14}$/;
-  return passRegEx.test(String(pass));
+function isValid(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
+
+form.addEventListener('submit', handleSubmit);
