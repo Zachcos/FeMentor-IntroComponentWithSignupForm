@@ -183,3 +183,47 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 850px) {
+  .full-wrap {
+    background: url("/images/bg-intro-mobile.png"), $red;
+    flex-direction: column;
+    height: 100%;
+    overflow: visible;
+    padding-bottom: 10%;
+  }
+
+  .hero,
+  .cards {
+    display: flex;
+    width: 95%;
+  }
+
+  .hero {
+    margin: 0 auto;
+    padding: 20% 5% 10%;
+    text-align: center;
+    &__title {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+    &__copy {
+      line-height: 1.9rem;
+    }
+  }
+
+  .cards {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    &__featured {
+      padding: 22px 10%;
+      line-height: 1.3rem;
+    }
+    &__form {
+      &__terms {
+        line-height: 1rem;
+      }
+    }
+  }
+}
