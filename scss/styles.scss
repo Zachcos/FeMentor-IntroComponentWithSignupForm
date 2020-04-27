@@ -68,7 +68,8 @@ body {
 
 .cards {
   flex-direction: column;
-  padding: 8% 12% 0 0;
+  padding: 0 12% 0 0;
+  justify-content: center;
   &__featured {
     @include font__reg;
     @include shadow;
@@ -92,8 +93,12 @@ body {
       display: flex;
       flex-direction: column;
       .form-control {
-        width: 85%;
         margin: 0 auto 20px auto;
+        position: relative;
+        width: 85%;
+        &:first-child {
+          margin-top: 35px;
+        }
         input {
           @include font__semiBold;
           background: transparent;
@@ -101,7 +106,6 @@ body {
           border: 1px solid hsla(246, 25%, 77%, 0.6);
           color: $darkBlue;
           font-size: 0.9rem;
-          // margin: 0 auto 20px auto;
           outline: none;
           padding: 17px 10px 17px 20px;
           width: 100%;
@@ -114,8 +118,30 @@ body {
             opacity: 0.6;
           }
         }
-        &:first-child {
-          margin-top: 35px;
+        img {
+          display: none;
+          position: absolute;
+          top: 15px;
+          right: 25px;
+        }
+        p {
+          display: none;
+          @include font__med;
+          color: $red;
+          font-size: 0.65rem;
+          padding-top: 10px;
+          text-align: right;
+          font-style: italic;
+        }
+        &.error {
+          img,
+          p {
+            display: block;
+          }
+          input {
+            border: 2px solid $red;
+            color: $red;
+          }
         }
       }
       button {
@@ -145,7 +171,8 @@ body {
       @include font__med;
       color: $grayishBlue;
       font-size: 0.65rem;
-      margin: 20px auto 50px;
+      margin: 0 auto;
+      padding: 20px 0 40px;
       text-align: center;
       width: 85%;
       &--link {

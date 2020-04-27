@@ -176,7 +176,8 @@ body {
 
 .cards {
   flex-direction: column;
-  padding: 8% 12% 0 0;
+  padding: 0 12% 0 0;
+  justify-content: center;
 }
 .cards__featured {
   font-family: "Poppins`", sans-serif;
@@ -207,8 +208,12 @@ body {
   flex-direction: column;
 }
 .cards__form form .form-control {
-  width: 85%;
   margin: 0 auto 20px auto;
+  position: relative;
+  width: 85%;
+}
+.cards__form form .form-control:first-child {
+  margin-top: 35px;
 }
 .cards__form form .form-control input {
   font-family: "Poppins", sans-serif;
@@ -229,8 +234,29 @@ body {
   color: #3e3c49;
   opacity: 0.6;
 }
-.cards__form form .form-control:first-child {
-  margin-top: 35px;
+.cards__form form .form-control img {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.cards__form form .form-control p {
+  display: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #ff7a7a;
+  font-size: 0.65rem;
+  padding-top: 10px;
+  text-align: right;
+  font-style: italic;
+}
+.cards__form form .form-control.error img,
+.cards__form form .form-control.error p {
+  display: block;
+}
+.cards__form form .form-control.error input {
+  border: 2px solid #ff7a7a;
+  color: #ff7a7a;
 }
 .cards__form form button {
   font-family: "Poppins", sans-serif;
@@ -259,7 +285,8 @@ body {
   font-weight: 500;
   color: #b9b6d3;
   font-size: 0.65rem;
-  margin: 20px auto 50px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
   text-align: center;
   width: 85%;
 }
