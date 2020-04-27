@@ -23,7 +23,7 @@ function onClick() {
     firstName.classList.add("error")
   }
 
-  if (lastVal.length > 0 && validateNames(lastVal)) {
+  if (validateNames(lastVal)) {
     lastName.classList.remove("error")
   } else {
     lastName.classList.add("error")
