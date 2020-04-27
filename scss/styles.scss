@@ -91,27 +91,31 @@ body {
     form {
       display: flex;
       flex-direction: column;
-      input {
-        @include font__semiBold;
-        background: transparent;
-        border-radius: 6px;
-        border: 1px solid hsla(246, 25%, 77%, 0.6);
-        color: $darkBlue;
-        font-size: 0.9rem;
-        margin: 0 auto 20px auto;
-        outline: none;
-        padding: 17px 10px 17px 20px;
+      .form-control {
         width: 85%;
+        margin: 0 auto 20px auto;
+        input {
+          @include font__semiBold;
+          background: transparent;
+          border-radius: 6px;
+          border: 1px solid hsla(246, 25%, 77%, 0.6);
+          color: $darkBlue;
+          font-size: 0.9rem;
+          // margin: 0 auto 20px auto;
+          outline: none;
+          padding: 17px 10px 17px 20px;
+          width: 100%;
+          &:active,
+          &:focus {
+            border-color: hsla(248, 32%, 49%, 1);
+          }
+          &::-webkit-input-placeholder {
+            color: $darkBlue;
+            opacity: 0.6;
+          }
+        }
         &:first-child {
           margin-top: 35px;
-        }
-        &:active,
-        &:focus {
-          border-color: hsla(248, 32%, 49%, 1);
-        }
-        &::-webkit-input-placeholder {
-          color: $darkBlue;
-          opacity: 0.6;
         }
       }
       button {

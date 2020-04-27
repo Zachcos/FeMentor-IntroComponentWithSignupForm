@@ -206,7 +206,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.cards__form form input {
+.cards__form form .form-control {
+  width: 85%;
+  margin: 0 auto 20px auto;
+}
+.cards__form form .form-control input {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   background: transparent;
@@ -214,20 +218,19 @@ body {
   border: 1px solid rgba(185, 182, 211, 0.6);
   color: #3e3c49;
   font-size: 0.9rem;
-  margin: 0 auto 20px auto;
   outline: none;
   padding: 17px 10px 17px 20px;
-  width: 85%;
+  width: 100%;
 }
-.cards__form form input:first-child {
-  margin-top: 35px;
-}
-.cards__form form input:active, .cards__form form input:focus {
+.cards__form form .form-control input:active, .cards__form form .form-control input:focus {
   border-color: #6055a5;
 }
-.cards__form form input::-webkit-input-placeholder {
+.cards__form form .form-control input::-webkit-input-placeholder {
   color: #3e3c49;
   opacity: 0.6;
+}
+.cards__form form .form-control:first-child {
+  margin-top: 35px;
 }
 .cards__form form button {
   font-family: "Poppins", sans-serif;
